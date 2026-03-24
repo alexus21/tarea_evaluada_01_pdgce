@@ -1,7 +1,7 @@
 CREATE OR REPLACE FUNCTION fn_update_status()
 RETURNS TRIGGER AS $$
     BEGIN
-        UPDATE pizarras SET estado = 'En Reparación' WHERE id = NEW.id;
+        UPDATE pizarras SET estado = 'En Reparación' WHERE id = NEW.pizarra_id;
 
         RETURN NEW;
 
