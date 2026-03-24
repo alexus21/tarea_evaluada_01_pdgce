@@ -104,6 +104,21 @@ SELECT * FROM pizarras;
 
 ---
 
+## Ejecutar Test Cases Manualmente
+
+El script `v1_2026_03_24_test_cases.sql` contiene pruebas de integridad que modifican datos (eliminaciones). Por esta razon, **no se ejecuta automaticamente** desde `main.sql`.
+
+Para ejecutar los test cases manualmente y verificar el comportamiento de:
+- **CHECK constraint** en `nivel_prioridad`
+- **ON DELETE SET NULL** al eliminar un tecnico
+- **ON DELETE CASCADE** al eliminar una pizarra
+
+```bash
+docker exec -it postgres17 psql -U postgres -d db_eboard_bug_report -f /docker-entrypoint-initdb.d/v1_2026_03_24_test_cases.sql
+```
+
+---
+
 ## Estructura de Scripts SQL
 
 | Archivo | Descripción |
@@ -117,7 +132,7 @@ SELECT * FROM pizarras;
 | `v1_2026_03_23_create_trigger_reporte_fallos.sql` | Crea funcion PL/pgSQL y trigger de actualizacion de estado |
 | `v1_2026_03_23_insert_tecnicos.sql` | Inserta datos iniciales de tecnicos |
 | `v1_2026_03_23_insert_pizarras.sql` | Inserta datos iniciales de pizarras |
-| `v1_2026_03_24_insert_reporte_fallos.sql` | Inserta reportes de fallos de prueba |
+| `v1_2026_03_24_test_cases.sql` | Test cases: CHECK constraint, ON DELETE SET NULL, ON DELETE CASCADE |
 | `v1_2026_03_23_mantenimiento.sql` | Modulo 3: Ejecuta VACUUM ANALYZE para mantenimiento |
 | `v1_2026_03_23_documentacion.sql` | Modulo 4: Comentarios de metadatos en tablas/columnas |
 
