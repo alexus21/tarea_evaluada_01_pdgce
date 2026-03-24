@@ -112,9 +112,14 @@ SELECT * FROM pizarras;
 | `v1_2026_03_23_create_tecnicos_table.sql` | Crea la tabla tecnicos |
 | `v1_2026_03_23_create_pizarras_table.sql` | Crea la tabla pizarras |
 | `v1_2026_03_23_create_reporte_fallos_table.sql` | Crea la tabla reporte_fallos |
-| `v1_2026_03_23_create_trigger_reporte_fallos.sql` | Crea función PL/pgSQL y trigger de actualización de estado de pizarra |
-| `v1_2026_03_23_insert_tecnicos.sql` | Inserta datos iniciales de técnicos |
+| `v2_2026_03_24_alter_reporte_fallos_add_prioridad.sql` | Modulo 2: Anade columna nivel_prioridad con CHECK |
+| `v2_2026_03_24_create_indexes.sql` | Modulo 2: Crea indices para optimizar consultas |
+| `v1_2026_03_23_create_trigger_reporte_fallos.sql` | Crea funcion PL/pgSQL y trigger de actualizacion de estado |
+| `v1_2026_03_23_insert_tecnicos.sql` | Inserta datos iniciales de tecnicos |
 | `v1_2026_03_23_insert_pizarras.sql` | Inserta datos iniciales de pizarras |
+| `v1_2026_03_24_insert_reporte_fallos.sql` | Inserta reportes de fallos de prueba |
+| `v1_2026_03_23_mantenimiento.sql` | Modulo 3: Ejecuta VACUUM ANALYZE para mantenimiento |
+| `v1_2026_03_23_documentacion.sql` | Modulo 4: Comentarios de metadatos en tablas/columnas |
 
 ---
 
